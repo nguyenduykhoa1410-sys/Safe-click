@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SafeClick giúp nhận diện dấu hiệu email, tin nhắn và đường link lừa đảo trên Internet.">
+    <meta property="og:title" content="SafeClick - An toàn trên Internet">
+    <meta property="og:description" content="Nhận diện dấu hiệu lừa đảo trong email và đường link ngay trên trình duyệt.">
+    <title>SafeClick - An toàn trên Internet</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.className = "js";</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Bỏ qua điều hướng</a>
+
+<header class="header">
+    <nav class="navbar" aria-label="Điều hướng chính">
+        <a href="#home" class="logo"><span class="logo-icon">S</span>SafeClick</a>
+        <ul class="nav-links">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#check-link">Kiểm tra đường link</a></li>
+            <li><a href="#check-email">Kiểm tra email</a></li>
+            <li><a href="#faq">Hỏi đáp</a></li>
+        </ul>
+        <a href="#choose-check" class="nav-button">Bắt đầu</a>
+    </nav>
+</header>
+
+<main id="main">
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Đừng để một cú nhấp chuột <span>khiến bạn gặp rủi ro.</span></h1>
+            <p class="hero-description">
+                Nhận diện dấu hiệu lừa đảo trong email, tin nhắn và đường link,
+                trang bị kiến thức để bảo vệ bản thân trước những nguy cơ trên Internet.
+            </p>
+            <a href="#choose-check" class="btn">Kiểm tra ngay</a>
+            <p class="hero-note">Nội dung bạn nhập được xử lý ngay trên trình duyệt, không gửi đi đâu.</p>
+        </div>
+
+        <div class="hero-visual">
+            <div class="security-card">
+                <div class="shield-icon"><svg class="icon"><use href="#i-search"/></svg></div>
+                <h2>Kiểm tra trước khi nhấp</h2>
+                <p>Một chút cảnh giác có thể giúp bạn tránh những rủi ro không đáng có.</p>
+                <div class="security-status"><span class="status-dot"></span>Sẵn sàng hỗ trợ bạn</div>
+            </div>
+        </div>
+    </section>
+
+    <noscript><p class="noscript">Công cụ kiểm tra cần bật JavaScript để hoạt động.</p></noscript>
+
+    <section class="choose-section" id="choose-check">
+        <div class="section-heading">
+            <h2 tabindex="-1">Bạn muốn kiểm tra điều gì?</h2>
+            <p>Chọn một chức năng để bắt đầu.</p>
+        </div>
+        <div class="choose-options">
+            <a class="choose-card" href="#check-email">
+                <span class="choose-icon"><svg class="icon"><use href="#i-mail"/></svg></span>
+                <h3>Kiểm tra email / tin nhắn</h3>
+                <p>Nhận diện dấu hiệu đáng ngờ trong email hoặc tin nhắn nhận được.</p>
+                <span class="choose-action">Chọn chức năng →</span>
+            </a>
+            <a class="choose-card" href="#check-link">
+                <span class="choose-icon"><svg class="icon"><use href="#i-link"/></svg></span>
+                <h3>Kiểm tra đường link</h3>
+                <p>Xem xét các dấu hiệu đáng ngờ trong đường dẫn trước khi mở.</p>
+                <span class="choose-action">Chọn chức năng →</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="check-section" id="check-link">
+        <a class="back" href="#choose-check">← Quay lại lựa chọn</a>
+        <div class="section-heading">
+            <h2 tabindex="-1">Đường link này có đáng tin cậy?</h2>
+            <p>Nhập URL để kiểm tra các dấu hiệu đáng ngờ. Không cần nhấp vào đường link để thử.</p>
+        </div>
+
+        <form class="check-form" id="link-form" novalidate>
+            <label for="url-input">Đường link cần kiểm tra</label>
+            <div class="input-group">
+                <input class="field" type="text" inputmode="url" id="url-input" name="url"
+                       placeholder="https://example.com" autocomplete="off" spellcheck="false">
+                <button type="submit" class="btn">Phân tích đường link</button>
+            </div>
+            <div class="actions">
+                <button type="button" class="btn ghost" data-sample>Thử ví dụ mẫu</button>
+            </div>
+            <p class="form-note">Phiên bản hiện tại chỉ áp dụng các quy tắc cơ bản, chưa đối chiếu với cơ sở dữ liệu website độc hại.</p>
+            <div id="url-result" class="result" role="status" aria-live="polite"></div>
+        </form>
+    </section>
+
+    <section class="check-section" id="check-email">
+        <a class="back" href="#choose-check">← Quay lại lựa chọn</a>
+        <div class="section-heading">
+            <h2 tabindex="-1">Tin nhắn này có dấu hiệu lừa đảo?</h2>
+            <p>Dán thông tin email hoặc tin nhắn để xem xét những dấu hiệu đáng ngờ. Không nhập mật khẩu hoặc mã OTP thật.</p>
+        </div>
+
+        <form class="check-form" id="email-form" novalidate>
+            <label for="email-sender">Người gửi (email hoặc số điện thoại, không bắt buộc)</label>
+            <input class="field" type="text" id="email-sender" name="sender"
+                   placeholder='Ví dụ: "Ngân hàng" <support@example.com>' autocomplete="off">
+
+            <label for="email-subject">Tiêu đề (không bắt buộc)</label>
+            <input class="field" type="text" id="email-subject" name="subject" placeholder="Nhập tiêu đề email" autocomplete="off">
+
+            <label for="email-content">Nội dung</label>
+            <textarea class="field" id="email-content" name="content" rows="7"
+                      placeholder="Dán nội dung cần kiểm tra..."></textarea>
+
+            <div class="actions">
+                <button type="submit" class="btn">Kiểm tra nội dung</button>
+                <button type="button" class="btn ghost" data-sample>Thử ví dụ mẫu</button>
+            </div>
+            <p class="form-note">Kết quả chỉ mang tính tham khảo, chưa bảo đảm phát hiện được mọi trường hợp lừa đảo.</p>
+            <div id="email-result" class="result" role="status" aria-live="polite"></div>
+        </form>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="section-heading">
+                <h2>Góc giải đáp an toàn số</h2>
+                <p>Những kiến thức thiết thực giúp bạn tự bảo vệ mình khi tham gia không gian mạng.</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item"><summary>Làm thế nào để đánh giá một website có an toàn khi sử dụng?</summary>
+                    <p>Kiểm tra chính xác tên miền, kết nối HTTPS, thông tin đơn vị vận hành và chính sách quyền riêng tư. Không có một dấu hiệu riêng lẻ nào bảo đảm website an toàn tuyệt đối.</p></details>
+                <details class="faq-item"><summary>Những dấu hiệu nào có thể cảnh báo một website giả mạo?</summary>
+                    <p>Hãy chú ý tên miền gần giống trang chính thức, lỗi chính tả bất thường, nội dung thúc giục hành động và yêu cầu cung cấp mật khẩu hoặc mã OTP đáng ngờ.</p></details>
+                <details class="faq-item"><summary>Làm sao xác minh một doanh nghiệp trực tuyến có đáng tin cậy?</summary>
+                    <p>Đối chiếu thông tin doanh nghiệp với nguồn đăng ký chính thức, kiểm tra địa chỉ liên hệ và truy cập website từ nguồn đáng tin. Đừng chỉ dựa vào đánh giá hoặc hình ảnh do chính trang đó đăng.</p></details>
+                <details class="faq-item"><summary>Biểu tượng ổ khóa HTTPS có đồng nghĩa website an toàn không?</summary>
+                    <p>Không. HTTPS giúp mã hóa kết nối giữa trình duyệt và website, nhưng website lừa đảo vẫn có thể sử dụng HTTPS. Bạn vẫn cần kiểm tra tên miền và mục đích của trang.</p></details>
+                <details class="faq-item"><summary>Công cụ kiểm tra đường link có thể phát hiện mọi website độc hại không?</summary>
+                    <p>Không có công cụ nào phát hiện được tất cả mối đe dọa. Một đường link mới tạo có thể chưa được ghi nhận. Vì vậy, hãy kết hợp kết quả kiểm tra với việc xác minh nguồn gửi.</p></details>
+                <details class="faq-item"><summary>Làm thế nào để hạn chế rủi ro lộ thông tin cá nhân trên mạng?</summary>
+                    <p>Chỉ cung cấp dữ liệu thực sự cần thiết, dùng mật khẩu riêng cho từng tài khoản, bật xác thực đa yếu tố và hạn chế chia sẻ giấy tờ hoặc thông tin nhạy cảm trên biểu mẫu không rõ nguồn gốc.</p></details>
+                <details class="faq-item"><summary>Tôi nên làm gì nếu đã nhập mật khẩu vào một trang đáng ngờ?</summary>
+                    <p>Hãy đổi mật khẩu ngay từ website hoặc ứng dụng chính thức, đăng xuất các phiên đăng nhập lạ và bật xác thực đa yếu tố. Nếu dùng mật khẩu đó ở nơi khác, hãy đổi cả những mật khẩu trùng lặp.</p></details>
+                <details class="faq-item"><summary>Những phương thức thanh toán nào giúp giảm rủi ro khi mua sắm trực tuyến?</summary>
+                    <p>Ưu tiên phương thức thanh toán có cơ chế bảo vệ người mua và thông báo giao dịch. Không chuyển tiền theo yêu cầu bất thường trước khi xác minh người bán và điều kiện giao dịch.</p></details>
+            </div>
+
+            <p class="faq-note">SafeClick cung cấp kiến thức tham khảo để nâng cao nhận thức, không thay thế việc xác minh độc lập hoặc công cụ bảo mật chuyên dụng.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <a href="#home" class="logo"><span class="logo-icon">S</span>SafeClick</a>
+    <p>Dự án học tập về nhận diện email và đường link lừa đảo.</p>
+    <p class="footer-note">SafeClick là công cụ hỗ trợ nâng cao nhận thức, không bảo đảm phát hiện mọi mối đe dọa.</p>
+    <p class="copyright">© 2026 SafeClick. Dự án cá nhân.</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
